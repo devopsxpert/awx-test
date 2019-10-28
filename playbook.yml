@@ -1,9 +1,8 @@
 ---
 
-- hosts: localhost
+- hosts: tag_Role_nexus
   connection: local
   gather_facts: false
   tasks:
-    - name: find ec2 facts
-      ec2_instance_facts:
-        region: eu-west-1
+    - name: get IP
+      shell: ifconfig
